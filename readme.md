@@ -23,6 +23,18 @@ Id  Name                Grades
 120 Francesca da Polenta    84
 Ricordate: il primo push dovrà essere un file README.md contenente la risoluzione dell’esercizio in linguaggio naturale!
 
+SNACK 3
+Creare un array di oggetti:
+Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+Stampare in console la bici con peso minore utilizzando destructuring e template literal
+SNACK 4
+Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
+Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+BONUS
+Stampare in pagina oltre che in console!
+
 ------SVOLGIMENTO-------
 
 **SNACK 1**
@@ -44,3 +56,29 @@ JavaScript
 3. Stampo a console una lista dei nomi degli studenti in maiuscolo
 4. Stampo a console una lista degli studenti con voto superiore a 70
 5. Stampo a console una lista degli studenti con voto superiore a 70 e id superiore a 120
+
+**SNACK 3**
+JavaScript
+1. Creo un array di oggetti
+2. Aggiungo gli oggetti che sono bici con 2 proprietà nome e peso
+3. Stampo in console la bici con peso minore utilizzando destructuring e template literal
+
+HTML
+BONUS
+4. Creo una struttura HTML per ospitare l'informazione
+Mostro nella pagina HTML la bici con peso minore
+
+**SNACK 4**
+JavaScript
+1. Creo un array di oggetti di squadre di calcio
+2. Agiungo  per ogni squadra le come proprietà:
+   nome, punti fatti, falli subiti.
+3. Destrutturo la proprietà 'nome' e setto tutte le altre  a 0.
+4. Genero numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
+5. Con la destrutturazione creo un nuovo array i cui elementi contengono solo nomi e falli subiti 
+6. Stampo tutto in console.
+
+HTML
+BONUS
+4. Creo una struttura HTML per ospitare l'informazione
+Mostro nella pagina le squadre così ottenute nel JavaScript
