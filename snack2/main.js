@@ -92,3 +92,14 @@ const studentiTop1 = students.filter(function(students){
 
 // 5. Stampo a console una lista degli studenti con voto superiore a 70 e id superiore a 120
 
+const studentiTop2 = students.filter(function(students){
+    console.log(students);
+    console.log(students['id']);
+    console.log(students['grade']);
+    console.log(students['name']);
+
+    if(students.grade > 70 && students.id > 120) {
+        return true;
+    }
+})
+
