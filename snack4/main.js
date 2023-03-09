@@ -38,10 +38,24 @@ const squadre = [
         nome: "Djurgarden",
         punti: 0,
         falli: 0
-    }
+    },
     {
         nome: "Gefle",
         punti: 0,
         falli: 0
     }
 ];
+
+// 3. Destrutturo la proprietà 'nome' e setto tutte le altre  a 0
+
+//4. Genero numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
+    for (let i = 0; i < squadre.length; i++) {
+        squadre[i].punti = Math.floor(Math.random() * 100);
+        squadre[i].falli = Math.floor(Math.random() * 500);
+    }
+    console.log(squadre);
+    
+//5. Con la destrutturazione creo un nuovo array i cui elementi contengono solo nomi e falli subiti 
+//6. Stampo tutto in console.
+    const fallosi = squadre.map(({nome, falli}) => ({nome, falli}));
+    console.log(fallosi);
