@@ -2,7 +2,7 @@
 
 //1. Creo una lista con un array contentente gli ospiti per ordine di posto
 
-const ospitiVip = [
+const listaInvitati = [
     'Brad Pitt',
     'Johnny Depp',
     'Lady Gaga',
@@ -14,22 +14,26 @@ const ospitiVip = [
     'Amal Clooney',
     'Maneskin'
 ]
-console.log(ospitiVip);
-console.log()
+console.log(listaInvitati);
 
-//2. Per ogni ospite creo un oggetto contenente:
-//     - nome del tavolo
-//     - nome dell'ospite
-//     - posto occupato
 
-const ospitiVipList = ospitiVip.map((element,index) =>{
-  ospitiVip.forEach(element =>{
-  })
- return{name:(element), table:('Tavolo VIP'), place: (index + 1)}
-})
+// //2. Per ogni ospite creo un oggetto contenente:
+// //     - nomeTavolo: 'Tavolo Vip',
+// //     - ospite: 'Brad Pitt',
+// //     - segnaposto: 1
 
-console.log(ospitiVipList);
+// const ospitiVipList = ospitiVip.map((element,index) =>{
+//   ospitiVip.forEach(element =>{
+//   })
+//  return{name:(element), table:('Tavolo VIP'), place: (index + 1)}
+// })
 
-// 
+// console.log(ospitiVipList);
 
-// 3. Stampo a console la lista degli ospiti
+// // 
+
+// // 3. Stampo a console la lista degli ospiti
+
+listaInvitati.forEach(element,index,array) => {
+
+});
