@@ -65,5 +65,30 @@ console.log(targheStudenti);
 //const targheStudenti = students.map(students => students.name.toUpperCase()); 
 
 // 4. Stampo a console una lista degli studenti con voto superiore a 70
+
+//soluzione con forEach
+const studentiTop = [];
+
+students.forEach(function(students){
+    console.log(students.grade);
+    console.log(students.name);
+
+    if(students.grade > 70){
+        studentiTop.push(students.name);
+    }
+});
+
+//soluzione con filter
+const studentiTop1 = students.filter(function(students){
+    console.log(students);
+    console.log(students['grade']);
+    console.log(students['name']);
+
+    if(students.grade > 70) {
+        return true;
+    }
+
+})
+
 // 5. Stampo a console una lista degli studenti con voto superiore a 70 e id superiore a 120
 
