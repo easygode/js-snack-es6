@@ -3,6 +3,18 @@
 // 2. Agiungo  per ogni squadra le proprietà:
 //    nome, punti fatti, falli subiti.
 
+/*--------
+Functions
+----------*/
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+/*--------
+Main
+----------*/
+
 const squadre = [
     {
         nome: "Manchester",
@@ -55,7 +67,21 @@ const squadre = [
     }
     console.log(squadre);
     
+    //alternativa usando un forEach
+    squadre.forEach(element =>{
+        console.log(element);
+
+        element.punti = getRndInteger(30,40);
+        element.falli = getRndInteger(80,100);
+    })
+    console.log(squadre);
+    
 //5. Con la destrutturazione creo un nuovo array i cui elementi contengono solo nomi e falli subiti 
 //6. Stampo tutto in console.
-    const fallosi = squadre.map(({nome, falli}) => ({nome, falli}));
-    console.log(fallosi);
+    const fallosi = squadre.map(({nome, falli}) => {({nome, falli});
+    return {nome, falli};
+})
+console.log(fallosi);
+
+const fallosi1 = squadre.map(({nome, falli}) => ({nome, falli}));
+//^ equivalente ^ const fallosi1 = squadre.map(({nome, falli}) => return({nome, falli})); 
