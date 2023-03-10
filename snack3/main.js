@@ -4,31 +4,35 @@
 //2. Aggiungo gli oggetti che sono bici con 2 proprietà nome e peso
 const bikes = [
     {
-        name: "Peugeot",
+        nome: "Peugeot",
         weight: 15
     },
     {
-        name: "Allegro",
+        nome: "Allegro",
         weight: 22
     },
     {
-        name: "Rocker",
+        nome: "Rocker",
         weight: 10
     },
     {
-        name: "Holland",
+        nome: "Holland",
         weight: 14
     },
     {
-        name: "Bianchi",
+        nome: "Bianchi",
         weight: 9
     },
     {
-        name: "Canyon",
+        nome: "Canyon",
         weight: 10
     },
     {
-        name: "Gant",
+        nome: "Gant",
+        weight: 7
+    },
+    {
+        nome: "Cannondale",
         weight: 7
     },
 ];
@@ -41,13 +45,36 @@ for (let i = 1; i < bikes.length; i++) {
     lightBike = bikes[i];
   }
 }
+
+//alternativa usando una costante currentBike invece di bikes[i]
+for (let i = 1; i < bikes.length; i++) {
+    const currentBike = bikes[i];
+    if (currentBike.weight < lightBike.weight) {
+      lightBike = currentBike;
+    }
+  }
 console.log(lightBike);
 
+const resultBikes = bikes.filter(({weight}) => {
+    console.log(weight);
+    if(weight === lightBike.weight){
+        return true;
+    }
+});
+
+console.log(resultBikes);
+
 //destructuring per estrarre le proprietà "nome" e "peso"
-const {name, weight} = lightBike;
+const {nome, weight} = lightBike;
 
 //template literal
-console.log(`La bici piuma è ${name} che pesa ${weight} kg.`);
+console.log(`La bici piuma è ${nome} che pesa ${weight} kg.`);
+
+//aggiungo un ciclo forEach nel caso ci fossero più bici con lo stesso peso piuma
+resultBikes.forEach(({nome, weight}) => {
+    console.log(`La bici piuma è ${nome} che pesa ${weight} kg.`);
+})
+
 
 
 
